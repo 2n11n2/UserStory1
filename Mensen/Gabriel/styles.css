@@ -1,0 +1,179 @@
+/* --- General and Body --- */
+body {
+    background-image: url(Photos/background.png);
+    background-size: cover; /* Better for responsiveness */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+    width: 100%;
+    background-color: #333;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+}
+
+.nav-links > li > a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links > li > a:hover {
+    background-color: #111;
+}
+
+/* --- Main Layout Containers --- */
+.grid-container {
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
+}
+
+.main_box {
+    background-color: rgb(9, 71, 35);
+    max-width: 1000px; /* Max width constraint */
+    width: 90%; /* Responsive width */
+    height: auto; /* Auto height based on content */
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.main_box_top {
+    background-color: rgb(158, 151, 151);
+    width: 100%; /* Take full width of parent */
+    height: 200px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box; /* Include padding in the width/height */
+    overflow: hidden;
+}
+
+.devopslogo {
+    /* Removed transform */
+    max-width: 40%;
+    height: 180px;
+    object-fit: contain;
+    margin-left: -70px; /* Minor adjustment for initial position */
+}
+
+.main_box_title {
+    /* Removed transform */
+    font-size: 100px; /* Reduced font size */
+    color: darkblue;
+    margin: 0;
+    text-align: right;
+    flex-grow: 1;
+}
+
+.profile_photo {
+    /* Centered photo using margins */
+    display: block;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin: -125px auto 40px; /* Pulls photo up, centers, adds bottom margin */
+    border-radius: 50%;
+    border: 5px solid rgb(9, 71, 35);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* --- NEW Content Layout (Flexbox) --- */
+.content-body {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 50px 50px; /* Added bottom padding to main box content */
+    box-sizing: border-box;
+    color: white; /* Set text color for content */
+}
+
+.text_within_the_box {
+    /* Removed absolute positioning */
+    width: 60%;
+    font-size: 28px;
+    padding-right: 20px; /* Space between text and contact info */
+}
+
+.etcinfo {
+    /* Removed absolute positioning */
+    width: 35%;
+    font-size: 22px;
+}
+
+.etcinfo ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* --- Media Queries for Mobile/Small Screens --- */
+@media (max-width: 768px) {
+    /* 1. Stack the main content columns */
+    .content-body {
+        flex-direction: column; /* Stack vertically on small screens */
+        padding: 20px;
+    }
+
+    .text_within_the_box,
+    .etcinfo {
+        width: 100%; /* Take full width */
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .text_within_the_box {
+        font-size: 22px;
+    }
+
+    /* 2. Adjust header elements */
+    .main_box_top {
+        flex-direction: column; /* Stack logo and title */
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    .devopslogo {
+        max-width: 80%; /* Smaller logo */
+        margin: 10px 0;
+        height: auto;
+    }
+
+    .main_box_title {
+        font-size: 60px; /* Smaller title */
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .profile_photo {
+        width: 200px;
+        height: 200px;
+        margin-top: -100px; /* Adjust pull-up margin */
+    }
+
+    /* 3. Adjust Navbar */
+    .nav-links > li > a {
+        font-size: 20px;
+        padding: 10px 12px;
+    }
+}

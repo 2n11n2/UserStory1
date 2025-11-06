@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+    background-size: cover;
+    background-image: url(Photos/nunsei2.jpg);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: cornflowerblue;   
+    
+}
+
+.flexgrid{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quadrado{
+    background-color: rgba(255, 255, 255, 0.616);
+    width: 1000px;
+    height: 876px;
+}
+.biden{
+    text-align: center;
+}
+.morgan {
+    height: 320px;
+    width: 300px;
+    margin-left: 0px;
+    margin-bottom: -15px;
+}
+.quadrado_grande_dentro{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0);
+    height: 800px;
+    width: 700px;
+    transform: translate(300px, -341px);
+    font-size: 31px;
+}
+.quadrado_pequeno_dentro{
+    position: relative;
+    /* background-color: rgba(0, 0, 0, 0.225); */
+    height: 481px;
+    width: 300px;
+    transform: translate(0px, -869px);
+    font-size: 20px;
+}
+.dogo{
+    height: 320px;
+    width: 300px;
+    transform: translate(0px, 50px);
+}
+.rodolfo{
+    background-color: rgba(5, 5, 5, 0.356);
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 15px;
+}  
+.link {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  overflow: hidden;
+}
